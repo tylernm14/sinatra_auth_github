@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   s.add_dependency "warden-github", "~>1.3"
 
   s.add_development_dependency "rake"
-  s.add_development_dependency "rspec",
-  s.add_development_dependency "shotgun",
-  s.add_development_dependency "randexp",
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "shotgun"
+  s.add_development_dependency "randexp"
   s.add_development_dependency "rack-test"
 
   s.files         = `git ls-files`.split("\n")
