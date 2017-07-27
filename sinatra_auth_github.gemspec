@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "sinatra",       "~>2.0"
   s.add_dependency "warden-github", "~>1.3"
+  s.add_dependency "haml"
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"

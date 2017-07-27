@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'warden/github'
+require 'haml'
 
 module Sinatra
   module Auth
@@ -22,7 +23,7 @@ module Sinatra
 
         helpers do
           def unauthorized_template
-            @unauthenticated_template ||= File.read(File.join(File.dirname(__FILE__), "views", "401.html"))
+            @unauthenticated_template ||= haml :unauthorized
           end
         end
 
