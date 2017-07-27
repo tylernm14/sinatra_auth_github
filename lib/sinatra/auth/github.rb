@@ -177,11 +177,14 @@ module Sinatra
         app.helpers Helpers
 
         app.get '/auth/github/callback' do
+          puts "WE ARE IN AUTH!!!!!!!!"
           if params["error"]
+            puts 'Auth error!!!!!!'
             redirect "/unauthenticated"
           else
             authenticate!
             return_to = session.delete('return_to') || _relative_url_for('/')
+            puts "About to redirect to....#{return_to}"
             redirect return_to
           end
         end
